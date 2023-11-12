@@ -5,11 +5,11 @@ from selenium.webdriver.support import expected_conditions as EC
 class BasePage():
     def __init__(self, driver: webdriver.Chrome):
         self.driver = driver
-        pass
 
-    def _find_element(self, by, value):
+    def _find_element(self, locator):
         try:
-            element = WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located((by, value)))
+            element = WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(locator))
+            print(f"Element with locator: {locator[1]} found")
             return element
         except:
             print("Error: Element Not found")
@@ -21,4 +21,10 @@ class BasePage():
     def _fill_field(self, webElement, text):
         webElement.clear()
         webElement.send_keys(text)
+
+    def _get_title(self):
+        return self.driver.title
+
+    def _get_text(self, element):
+        return element.text
 

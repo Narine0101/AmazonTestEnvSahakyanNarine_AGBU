@@ -15,6 +15,7 @@ driver.get("https://www.amazon.com/ap/signin?openid.pape.max_auth_age=0&openid.r
 loginPageObj = LoginPage(driver)
 
 loginPageObj.fill_username_field("narine.narine.1962@mail.ru")
+# loginPageObj.validate_continue_button_text()
 loginPageObj.click_to_continue_button()
 loginPageObj.fill_password_field("Sahakyan1963!")
 loginPageObj.click_to_signin_button()
