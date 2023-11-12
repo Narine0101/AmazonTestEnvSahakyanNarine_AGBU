@@ -1,0 +1,17 @@
+12-11-2023 18:11:14 INFO Must find element with locator: By: id, Value: ap_email
+12-11-2023 18:11:23 INFO Founded element with locator: By: id, Value: ap_email
+12-11-2023 18:11:23 INFO Changed value of element: <selenium.webdriver.remote.webelement.WebElement (session="b82eec027af1f2f89dd2eaed932e8aec", element="CBDF76B070277AF9E6870776FF073ED3_element_25")>
+12-11-2023 18:11:23 INFO Changed value of element: <selenium.webdriver.remote.webelement.WebElement (session="b82eec027af1f2f89dd2eaed932e8aec", element="CBDF76B070277AF9E6870776FF073ED3_element_25")>
+12-11-2023 18:11:23 INFO Must find element with locator: By: id, Value: continue
+12-11-2023 18:11:23 INFO Founded element with locator: By: id, Value: continue
+12-11-2023 18:11:23 INFO Must to be click to element: <selenium.webdriver.remote.webelement.WebElement (session="b82eec027af1f2f89dd2eaed932e8aec", element="CBDF76B070277AF9E6870776FF073ED3_element_32")>
+12-11-2023 18:11:24 INFO Clicked to element: <selenium.webdriver.remote.webelement.WebElement (session="b82eec027af1f2f89dd2eaed932e8aec", element="CBDF76B070277AF9E6870776FF073ED3_element_32")>
+12-11-2023 18:11:24 INFO Must find element with locator: By: id, Value: ap_password
+12-11-2023 18:11:24 INFO Founded element with locator: By: id, Value: ap_password
+12-11-2023 18:11:24 INFO Changed value of element: <selenium.webdriver.remote.webelement.WebElement (session="b82eec027af1f2f89dd2eaed932e8aec", element="2F00665BC7B607CA4290FD81442EC5BF_element_40")>
+12-11-2023 18:11:24 INFO Changed value of element: <selenium.webdriver.remote.webelement.WebElement (session="b82eec027af1f2f89dd2eaed932e8aec", element="2F00665BC7B607CA4290FD81442EC5BF_element_40")>
+12-11-2023 18:11:35 INFO Must find element with locator: By: id, Value: signInSubmit
+12-11-2023 18:11:35 INFO Founded element with locator: By: id, Value: signInSubmit
+12-11-2023 18:11:35 INFO Must to be click to element: <selenium.webdriver.remote.webelement.WebElement (session="b82eec027af1f2f89dd2eaed932e8aec", element="2F00665BC7B607CA4290FD81442EC5BF_element_44")>
+12-11-2023 18:11:35 INFO Clicked to element: <selenium.webdriver.remote.webelement.WebElement (session="b82eec027af1f2f89dd2eaed932e8aec", element="2F00665BC7B607CA4290FD81442EC5BF_element_44")>
+12-11-2023 18:11:45 INFO Closing Browser!
