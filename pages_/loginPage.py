@@ -11,6 +11,8 @@ class LoginPage(BasePage):
         self.__continueButtonLocator = (By.ID, "continue")
         self.__passwordButtonLocator = (By.ID, "ap_password")
         self.__signInButtonLocator = (By.ID, "signInSubmit")
+        self.__searchBoxLocator = (By.XPATH, "//input[@id='twotabsearchtextbox']")
+        self.__searchSubmitLocator = (By.XPATH, "//div[@class = 'nav-search-submit nav-sprite']")
 
     def fill_username_field(self, username):
         userNameFieldElement = self._find_element(self.__usernameFieldLocator)
@@ -25,10 +27,8 @@ class LoginPage(BasePage):
         self._fill_field(passwordFieldElement, password)
 
     def click_to_signin_button(self):
-        sleep(4)
         signInButtonElement = self._find_element(self.__signInButtonLocator)
         self._click(signInButtonElement)
-        sleep(5)
 
     def validate_continue_button_text(self):
         continueButtonElement = self._find_element(*self.__continueButtonLocator)
