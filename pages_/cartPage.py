@@ -1,15 +1,27 @@
 from selenium.webdriver.common.by import By
 from pages_.basePage import BasePage
+from common_.utilities_.customLogger import *
 
 
 class CartPage(BasePage):
+
     def __init__(self, driver):
         super().__init__(driver)
-        self.__firstProductDeleteButtonLocator = (By.XPATH, "(//input[@value='Delete'])[1]")
+        self.__cartCountLocator = (By.ID, "nav-cart-count")
+        self.__deleteFirstProductButtonLocator = (By.XPATH, "(//input[@value='Delete'])[1]")
+
+    def get_cart_count_element(self):
+        cartCountElement = self._find_element(self.__cartCountLocator)
+        return int(self._get_element_text(cartCountElement))
 
     def delete_first_product_from_cart(self):
-        firstProductDeleteButtonElement = self._find_element(self.__firstProductDeleteButtonLocator)
-        self._click(firstProductDeleteButtonElement)
+        deleteFirstProductButtonElement = self._find_element(self.__deleteFirstProductButtonLocator)
+        self._click(deleteFirstProductButtonElement)
+
+    def validate_emptiness_of_cart(self):
+        cartCountElement = self._find_element(self.__cartCountLocator)
+        if int(self._get_element_text(cartCountElement)) == 0:
+            logger("ERROR", f"The cart is empty:")
 
 
 
