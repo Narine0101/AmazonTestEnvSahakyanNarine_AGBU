@@ -2,7 +2,7 @@ from selenium.webdriver.common.by import By
 from pages_.basePage import BasePage
 
 
-class ResultPage():
+class ResultPage(BasePage):
 
     def __init__(self, driver):
         super().__init__(driver)
@@ -11,13 +11,13 @@ class ResultPage():
         self.__firstProductLocator = (By.XPATH, "//img[@class ='s-image'][1]")
 
     def click_on_sort_by_button(self):
-        sortByButtonElement = self.find_element(self.__sortByButtonLocator)
+        sortByButtonElement = self._find_element(self.__sortByButtonLocator)
         self._click(sortByButtonElement)
 
     def click_on_best_sellers_button(self):
-        bestSellersButtonElement = self.find_element(self.__bestSellersButtonLocator)
+        bestSellersButtonElement = self._find_element(self.__bestSellersButtonLocator)
         self._click(bestSellersButtonElement)
 
     def click_on_first_product_from_list(self):
-        firstProductElement = self.find_element(self.__firstProductLocator)
+        firstProductElement = self._find_element(self.__firstProductLocator)
         self._click(firstProductElement)

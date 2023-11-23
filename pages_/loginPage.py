@@ -1,3 +1,4 @@
+from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
 from selenium import webdriver
 from pages_.basePage import BasePage
@@ -10,6 +11,8 @@ class LoginPage(BasePage):
         self.__continueButtonLocator = (By.ID, "continue")
         self.__passwordFieldLocator = (By.ID, "ap_password")
         self.__signInButtonLocator = (By.ID, "signInSubmit")
+        self.__signAccountListButtonLocator = (By.XPATH, "//a[@id = 'nav-link-accountList']/span")
+        self.__signOutButtonLocator = (By.XPATH, "//a[@id = 'nav-item-signout']")
         self.__incorrectPasswordErrorMessageTextLocator = (By.CLASS_NAME, "a-list-item")
         self.__incorrectEmailErrorMessageTextLocator = (By.CLASS_NAME, "a-list-item")
         self.__keepMeSignedInLocator = (By.XPATH, "//input[@name = 'rememberMe']")
@@ -47,3 +50,14 @@ class LoginPage(BasePage):
     def click_to_keep_me_signed_in_check_box(self):
         keepMeSignedInElement = self._find_element(self.__keepMeSignedInLocator)
         self._click(keepMeSignedInElement)
+
+    def click_to_sign_out_button(self):
+        signOutButtonElement = self._find_element(self.__signOutButtonLocator)
+        self._click(signOutButtonElement)
+
+    def mouse_move_to_account_element(self):
+        accountElement = self._find_element(self.__signAccountListButtonLocator)
+        ActionChains(self.driver) \
+            .move_to_element(accountElement) \
+            .perform()
+
